@@ -1,0 +1,44 @@
+<!-- public/beats-legend.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="60" viewBox="0 0 300 60">
+    <style>
+        .label {
+        font-family: 'Inter', sans-serif;
+        font-size: 9px;
+        font-weight: 600;
+        text-anchor: middle;
+        dominant-baseline: hanging;
+        }
+    </style>
+
+    <!-- Beat color swatches and labels -->
+    <!-- Each block: 38x18, 6px gap -->
+    <!-- Start x = 0, y = 0 -->
+
+    <!-- Weakness -->
+    <rect x="0" y="0" width="38" height="18" fill="#6366f1"/>
+    <text class="label" x="19" y="22" fill="#6366f1">Weakness</text>
+
+    <!-- Desire -->
+    <rect x="44" y="0" width="38" height="18" fill="#0ea5e9"/>
+    <text class="label" x="63" y="22" fill="#0ea5e9">Desire</text>
+
+    <!-- Opponent -->
+    <rect x="88" y="0" width="38" height="18" fill="#f43f5e"/>
+    <text class="label" x="107" y="22" fill="#f43f5e">Opponent</text>
+
+    <!-- Plan -->
+    <rect x="132" y="0" width="38" height="18" fill="#10b981"/>
+    <text class="label" x="151" y="22" fill="#10b981">Plan</text>
+
+    <!-- Battle -->
+    <rect x="176" y="0" width="38" height="18" fill="#fb923c"/>
+    <text class="label" x="195" y="22" fill="#fb923c">Battle</text>
+
+    <!-- Self-Revelation -->
+    <rect x="220" y="0" width="38" height="18" fill="#8b5cf6"/>
+    <text class="label" x="239" y="22" fill="#8b5cf6">Self‑Revelation</text>
+
+    <!-- New Equilibrium -->
+    <rect x="264" y="0" width="38" height="18" fill="#f59e0b"/>
+    <text class="label" x="283" y="22" fill="#f59e0b">New Equilibrium</text>
+</svg>
