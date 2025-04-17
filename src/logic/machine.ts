@@ -84,11 +84,11 @@ export const storyMachine = createMachine<StoryContext, StoryEvent>(
             running: {
                 on: {
                     ADVANCE: {
-                        cond: (ctx, ev) => canTransition(ctx, ev.beatId),
+                        guard: (ctx, ev) => canTransition(ctx, ev.beatId),
                         actions: 'advance',
                     },
                     UNDO: {
-                        cond: (ctx) => ctx.path.length > 0,
+                        guard: (ctx) => ctx.path.length > 0,
                         actions: 'undo',
                     },
                 },
