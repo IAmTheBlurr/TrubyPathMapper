@@ -18,8 +18,8 @@ This project is for anyone who hears story logic **humming under the hood** and 
 
 ## One‑Minute Tour
 
-| Light UI | Dark UI |
-|---|---|
+| Light UI                                | Dark UI                               |
+|-----------------------------------------|---------------------------------------|
 | ![Light](./public/screenshot-light.png) | ![Dark](./public/screenshot-dark.png) |
 
 BeatCard → jot ideas · Palette → choose next beat · StepBar → pulse of progress · GraphDrawer → full skeleton · ⌘K palette → power moves
