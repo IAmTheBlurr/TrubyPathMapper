@@ -72,7 +72,7 @@ export const legalSuccessors = (ctx: StoryContext): Beat[] =>
 /**
  * ----- Machine definition -----
  */
-export const storyMachine = createMachine(
+export const storyMachine = createMachine<StoryContext, StoryEvent>(
     {
         id: 'story',
         // schema: { context: {} as StoryContext, events: {} as StoryEvent },
@@ -83,14 +83,12 @@ export const storyMachine = createMachine(
         states: {
             running: {
                 on: {
-                    ADVANCE: [
-                        {
-                            guard: (ctx, ev) => canTransition(ctx, ev.beatId),
-                            actions: 'advance',
-                        },
-                    ],
+                    ADVANCE: {
+                        cond: (ctx, ev) => canTransition(ctx, ev.beatId),
+                        actions: 'advance',
+                    },
                     UNDO: {
-                        guard: (ctx) => ctx.path.length > 0,
+                        cond: (ctx) => ctx.path.length > 0,
                         actions: 'undo',
                     },
                 },
@@ -102,8 +100,8 @@ export const storyMachine = createMachine(
             /**
              * Push target beat ID, update repeat counts and gate flag.
              */
-            advance: assign((ctx, ev: any): Partial<StoryContext> => {
-                const beatId: number = ev.beatId;
+            advance: assign((ctx, ev): Partial<StoryContext> => {
+                const beatId = ev.beatId;
                 const nextCounts = { ...ctx.repeatCounts, [beatId]: (ctx.repeatCounts[beatId] ?? 0) + 1 };
                 return {
                     path: [...ctx.path, beatId],
