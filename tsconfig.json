@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "jsx": "react-jsx",
+        "strict": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "rootDir": "src",
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"],
+            "@data/*": ["src/data/*"],
+            "@logic/*": ["src/logic/*"],
+            "@components/*": ["src/components/*"]
+        }
+    },
+    "include": ["src"]
+}
